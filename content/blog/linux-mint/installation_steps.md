@@ -2,9 +2,10 @@
 title: Reviving an Old PC!
 date: "2023-01-22T23:46:37.121Z"
 ---
-# Reviving an Old PC: A Step-by-Step Guide to Installing Linux Mint XFCE with Windows 7 and Zorin OS Lite in Dual Boot
+# Reviving an Old PC 🖥 : A Step-by-Step Guide to Installing Linux Mint XFCE with Windows 7 and Zorin OS Lite in Dual Boot
 
-![Linux Mint](https://www.linuxmint.com/pictures/screenshots/vera/xfce.png)
+<img src="https://www.linuxmint.com/pictures/screenshots/vera/xfce.png" style="width: 500px; height: 300px;">
+
 
 ---
 
@@ -29,32 +30,36 @@ If Windows 7 is your permanent OS & you don't have any other in dual boot, follo
 If you already have any other OS in dual boot with Windows 7, you might need to uninstall it, like I did.
 
 1. **Prepare the bootable USB**
+
    ![Bootable USB](https://linuxmint-installation-guide.readthedocs.io/en/latest/_images/etcher.png)
    Follow [these](https://linuxmint-installation-guide.readthedocs.io/en/latest/burn.html) steps.
 
 2. **Uninstall Zorin OS**
-   ![Zorin OS Lite](https://assets.zorincdn.com/images/releases/15/15-Lite.png)
 
-Following steps from this video
+   <img src="https://assets.zorincdn.com/images/releases/15/15-Lite.png" style="width: 500px; height: 300px;">
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DxtIy2uj9vs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    
-    
--  I didn't had a bootable CD for Windows to fix boot menu. So I jumped to uninstalling Zorin. 
-- `Delete Partition` was not enabled for me somehow. I tried to fix it but ended up extending the volume. 
-- EasyBCD or any similar tool is not mandatory as you can fix your BCD using Windows Command Prompt
-- I rebooted my system to begin installing Linux Mint
+    Following steps from this video
 
-![Win RE](https://neosmart.net/wiki/wp-content/uploads/sites/5/2013/09/Advanced-Boot-Options.jpg)
-- You can try to enter Windows recovery by following [these](https://neosmart.net/wiki/system-recovery-options/) steps if feasible. 
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DxtIy2uj9vs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                
+    -  I didn't had a bootable CD for Windows to fix boot menu. So I jumped to uninstalling Zorin. 
+    - `Delete Partition` was not enabled for me somehow. I tried to fix it but ended up extending the volume. 
+    - EasyBCD or any similar tool is not mandatory as you can fix your BCD using Windows Command Prompt
+    - I rebooted my system to begin installing Linux Mint
+
+    <img src="https://neosmart.net/wiki/wp-content/uploads/sites/5/2013/09/Advanced-Boot-Options.jpg" style="width: 500px; height: 300px;">
+
+    - You can try to enter Windows recovery by following [these](https://neosmart.net/wiki/system-recovery-options/) steps if feasible. 
 
 3. **Installing Linux Mint**
-   ![GRUB Menu](https://linuxmint-installation-guide.readthedocs.io/en/latest/_images/grub-efi.png)
+    <img src="https://linuxmint-installation-guide.readthedocs.io/en/latest/_images/grub-efi.png" style="width: 500px; height: 300px;">
+
+
    I got a similar GRUB menu & followed the steps described [here](https://linuxmint-installation-guide.readthedocs.io/en/latest/boot.html)
    After installation is completed. We have to fix boot menu before restarting.
 
 4. **Repair Boot Menu**
-![Boot Repair](https://linuxhint.com/wp-content/uploads/2018/09/10-6.png)
+   <img src="https://linuxhint.com/wp-content/uploads/2018/09/10-6.png" style="width: 500px; height: 300px;"> 
    It is possible to fix any boot issues using Linux. In fact, if you are stuck in a situation try to boot into another OS & fix the boot issues.
    
    Boot Repair is a tool to repair common boot issues on Ubuntu, Debian, Arch, Linux Mint, OpenSUSE, Fedora and other Linux distributions, Windows and Mac OS operating systems.
