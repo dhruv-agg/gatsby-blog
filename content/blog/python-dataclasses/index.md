@@ -1,6 +1,6 @@
 ---
 title: "Unleashing the Power of Python Data Classes: Why and Where to Use Them"
-date: "2023-01-22T23:46:37.121Z"
+date: "2023-01-28T23:46:37.121Z"
 ---
 
 In Python, when we think of a _class_, a structure like this comes to our mind
