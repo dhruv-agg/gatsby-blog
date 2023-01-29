@@ -12,12 +12,13 @@ module.exports = {
     title: `Personal Blog`,
     author: {
       name: `Dhruv Aggarwal`,
-      summary: `who lives and works in New Delhi, building useful things.`,
+      summary: `who is a Data scientist with expertise in PySpark, Python, data engineering, big data & data lakes. Skilled in solving complex business problems with data-driven solutions.`,
     },
     description: `A blog demonstrating my learnings.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       linkedin: `dhruv-agg94`,
+      github: `dhruv-agg`,
     },
   },
   plugins: [
