@@ -1,9 +1,9 @@
 ---
-title: Reviving an Old PC!
+title: Reviving an Old PC 🖥
 date: "2023-01-22T23:46:37.121Z"
 ---
 
-# Reviving an Old PC 🖥 : A Step-by-Step Guide to Installing Linux Mint XFCE with Windows 7 and Zorin OS Lite in Dual Boot
+## A Step-by-Step Guide to Installing Linux Mint XFCE with Windows 7 and Zorin OS Lite in Dual Boot
 
 <img src="https://www.linuxmint.com/pictures/screenshots/vera/xfce.png" style="width: 500px; height: 300px;">
 
@@ -47,7 +47,7 @@ If you already have any other OS in dual boot with Windows 7, you might need to 
    - EasyBCD or any similar tool is not mandatory as you can fix your BCD using Windows Command Prompt
    - I rebooted my system to begin installing Linux Mint
 
-   <img src="https://neosmart.net/wiki/wp-content/uploads/sites/5/2013/09/Advanced-Boot-Options.jpg" style="width: 500px; height: 300px;">
+   <img src="Advanced-Boot-Options.jpg" style="width: 500px; height: 300px;">
 
    - You can try to enter Windows recovery by following [these](https://neosmart.net/wiki/system-recovery-options/) steps if feasible.
 
