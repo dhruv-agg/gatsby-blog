@@ -1,8 +1,8 @@
 ---
-title: "Unleashing the Power of Python Data Classes: Why and Where to Use Them"
+title: "Unleashing the Power of Python Data Classes"
 date: "2023-01-28T23:46:37.121Z"
 ---
-
+## Why and Where to Use Them
 In Python, when we think of a _class_, a structure like this comes to our mind
 
 ```python
@@ -33,7 +33,7 @@ class Person:
         pass
 ```
 
-Yes, we are talking to about [Data Classes](https://docs.python.org/3/library/dataclasses.html).
+Yes, we are talking about the [Data Classes](https://docs.python.org/3/library/dataclasses.html).
 
 - Less biolerplate code
 - More intuitive
@@ -42,16 +42,16 @@ Yes, we are talking to about [Data Classes](https://docs.python.org/3/library/da
 ---
 
 _In this blog_, we'll focus on **why** you should use DataClasses & **where** you should use them.
-I'll attach resources for a deeper dive in DataClasses.
+For a deeper dive in DataClasses, I'll attach resources.
 
-## **REQUIREMENTS**
+#### **REQUIREMENTS**
 
 - Python 3.7+ 🐍
-- A zeal to learn :)
+- A zeal to learn 😊
 
-When working with data-oriented classes, that behaves like a data-container, you might want to create many instances of them ,compare, sort the objects and do a lot of data centric operations. Such functionalities are not provided out of the box by regular classes.
+When working with data-oriented classes, that behave like data-containers, you might want to create many instances of them ,compare, sort the objects and do a lot of data centric operations. Such functionalities are not provided right out of the box by regular classes. Data classes can hlp you achieve those functionalities with a more compact & intuitive code. 
 
-## 1. **Less code to define a class**
+### 1. **Less code to define a class**
 
 ```python
 from dataclasses import dataclass
@@ -65,7 +65,7 @@ class Student:
 
 The dataclass decorator `@dataclass` is actually a code generator that automatically adds other methods under the hood. It adds methods like `__init__` , `__eq__` and `__repr__` and many more to your class. These methods are responsible for setting the attribute values, testing for equality and representing objects in a nice string format.
 
-## 2. **Default values for attributes**
+### 2. **Default values for attributes**
 
 ```python
 from dataclasses import dataclass
@@ -79,7 +79,7 @@ class Student:
 
 As a general python convention, _"fields without default values cannot appear after fields with default values."_
 
-## 3. **Customised representation of the objects**
+### 3. **Customised representation of the objects**
 
 The `__repr__()` can be modified to ovverride the default presentation of objects in the console
 
@@ -115,9 +115,9 @@ def __str__(self) -> str:
 # John Smith age 12, studies in grade 5
 ```
 
-## 4. **Easy conversion to a tuple or a dictionary**
+### 4. **Easy conversion to a tuple or a dictionary**
 
-Always convertiing objects to `dict` or `tuple` when interacting with other programs that expect these formats? Objects can be easily serialized into dicts or tuples
+Always converting objects to `dict` or `tuple` when interacting with other programs that expect these formats? Objects can be easily serialized into dicts or tuples using Data Classes.
 
 ```python
 from dataclasses import dataclass
@@ -145,7 +145,7 @@ print(asdict(john))
 
 ```
 
-## 5. **Create READ-only objects**
+### 5. **Create READ-only objects**
 
 There are times when you want to prevent anyone from modifying the values of the attributes once the object is instantiated i.e. you want a `frozen` or an _immutable_ instance.
 
@@ -180,7 +180,7 @@ dataclasses.FrozenInstanceError: cannot assign to field 'age'
 
 Also a `__hash__()` will be automatically created by Python when `frozen=True`
 
-## 6. **Comparison of objects**
+### 6. **Comparison of objects**
 
 ```python
 john_again = Student(first_name='John', last_name='Smith', age=12, grade=5)
@@ -189,7 +189,7 @@ print(john == john_again)
 ```
 
 In order to compare two objects `john` & `john_again`, you’d have to implement the `__eq__` method yourself.
-This method should first checks that the two objects are instances of the same class and then tests the equality between tuples of attributes.
+This method should first check that the two objects are instances of the same class and then test the equality between tuples of attributes.
 
 ```python
 def __eq__(self, other):
@@ -205,7 +205,7 @@ def __eq__(self, other):
 
 ```
 
-Now if you decide to add new attributes to your class, you’d have to update the `__eq__()` method again. Then do the same goes for `__ge__()` , `__gt__()` ,`__le__()` and `__lt__()` if they’re used.
+Now if you decide to add new attributes to your class, you’d have to update the `__eq__()` method again. Then do the same for `__ge__()` , `__gt__()` ,`__le__()` and `__lt__()` if they’re used.
 
 But, with DataClass, it works out of the box
 
@@ -214,7 +214,7 @@ print(john == john_again)
 # True
 ```
 
-## **ADVANCED FEATURE: SORTING**
+### **ADVANCED FEATURE: SORTING**
 
 It's also possible to **sort** & **compare** objects based on an attribute as a default.
 
@@ -252,6 +252,7 @@ print(sam > john)
 Here, `__gt__()` considers `age` attribute for comparison.
 
 **QUESTION**❓**How'd you sort a frozen set?**
+
 Using the `__setattr__()`
 
 ```python
@@ -285,11 +286,11 @@ print(sam > john)
 # True
 ```
 
-## ⭐**BONUS**⭐
+### ⭐**BONUS**⭐
 
 If you've read this far, here's an advanced functionality of DataClasses
 
-## 7. **Initialize internal attributes**
+### 7. **Initialize internal attributes**
 
 In some situations, you may need to create an attribute that is only defined internally, not when the class is instantiated. The attribute has a value that can depend on previously-set attributes.  
 The `__post_init__()` is called right after the `__init__()` method is called.
@@ -321,15 +322,45 @@ print(john.full_name)
 We can still instantiate the `Student` class without setting the `full_name` attribute.
 The `repr=True` makes it visible when the object is printed.
 
-## It's all great but where do I use it?
+### It's all great but where do I use it?
 
-- If you have Python 3.7+ :P
+- If you have Python 3.7+ 😛
 - You're working on a data-centric scenario
   - It's a data-driven scenario & less behaviour-driven
   - You need to create many data-centric classes
   - Optionally, you need to ensure a degree of _immutability_ on the objects of this class.
 
-### Resources
+Example from `artifacts.py` showing how Data Classes are used for data-centric classes in production code. 
+
+```python
+from dataclasses import dataclass
+
+
+@dataclass
+class DataIngestionArtifact:
+    trained_file_path: str
+    test_file_path: str
+
+
+@dataclass
+class DataValidationArtifact:
+    validation_status: bool
+    valid_train_file_path: str
+    valid_test_file_path: str
+    invalid_train_file_path: str
+    invalid_test_file_path: str
+    drift_report_file_path: str
+
+
+@dataclass
+class DataTransformationArtifact:
+    transformed_object_file_path: str
+    transformed_train_file_path: str
+    transformed_test_file_path: str
+
+```
+
+#### Resources
 
 While learning about dataclasses, I went through many resources, here’s a list of the best I’ve found.
 
@@ -339,10 +370,12 @@ While learning about dataclasses, I went through many resources, here’s a list
 
 - [Data Classes in Python 3.7+ (Guide)](www.realpython.com/python-data-classes/)
 
+- [Data Classes Python documentation](https://docs.python.org/3/library/dataclasses.html)
+
 _I have tried to be thorough and cover most of the use cases, yet, no man is perfect. Reach out if you find mistakes, or want me to pay attention to relevant use cases._
 
 ---
 
 Thanks for reading 🙏
-If you’ve made it this far, I really thank you for your time :)
+If you’ve made it this far, I really thank you for your time 😊
 That’ll be all for me today. Until next time 👋
