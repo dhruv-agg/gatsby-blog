@@ -1,5 +1,5 @@
 ---
-title: "Unleashing the Power of Python Data Classes"
+title: "Exploring the Power of Python Data Classes"
 date: "2023-01-28T23:46:37.121Z"
 ---
 ## Why and Where to Use Them
