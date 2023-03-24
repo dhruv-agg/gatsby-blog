@@ -23,7 +23,7 @@ What if we could have a more intuitive & less repeatitive way of doing the same 
 ```python
 from dataclasses import dataclass
 @dataclass
-class Person:
+class Student:
      first_name: str  # attribute 1
      last_name: str   # attribute 2
      age: int         # attribute 3
