@@ -1,9 +1,7 @@
 ---
-title: "Exploring the Power of Python Data Classes"
+title: "The real harm of using ChatGPT that nobody is talking about"
 date: "2023-03-24T23:46:37.121Z"
 ---
-## The real harm of using ChatGPT that nobody is talking about
-
 <img src="chat-gpt-harms.jpg" style="width: 500px; height: 300px;">
 
 **Do you find yourself wanting to use ChatGPT for everything?** 
