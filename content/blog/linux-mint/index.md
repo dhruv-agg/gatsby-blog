@@ -32,6 +32,7 @@ If you already have any other OS in dual boot with Windows 7, you might need to 
 1. **Prepare the bootable USB**
 
     <img src="https://linuxmint-installation-guide.readthedocs.io/en/latest/_images/etcher.png" style="width: 500px; height: 300px;">
+    
     Follow [these](https://linuxmint-installation-guide.readthedocs.io/en/latest/burn.html) steps.
 
 2. **Uninstall Zorin OS**
@@ -52,13 +53,16 @@ If you already have any other OS in dual boot with Windows 7, you might need to 
    - You can try to enter Windows recovery by following [these](https://neosmart.net/wiki/system-recovery-options/) steps if feasible.
 
 3. **Installing Linux Mint**
+
    <img src="https://linuxmint-installation-guide.readthedocs.io/en/latest/_images/grub-efi.png" style="width: 500px; height: 300px;">
 
    I got a similar GRUB menu & followed the steps described [here](https://linuxmint-installation-guide.readthedocs.io/en/latest/boot.html)
    After installation is completed. We have to fix boot menu before restarting.
 
 4. **Repair Boot Menu**
+
    <img src="https://linuxhint.com/wp-content/uploads/2018/09/10-6.png" style="width: 500px; height: 300px;">
+   
    It is possible to fix any boot issues using Linux. In fact, if you are stuck in a situation try to boot into another OS & fix the boot issues.
 
    Boot Repair is a tool to repair common boot issues on Ubuntu, Debian, Arch, Linux Mint, OpenSUSE, Fedora and other Linux distributions, Windows and Mac OS operating systems.
