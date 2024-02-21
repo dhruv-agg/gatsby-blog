@@ -3,10 +3,8 @@ title: "Think next when you write that for loop!"
 date: "2024-02-21T23:46:37.121Z"
 ---
 
-
-# Think next when you write that for loop!
-
 If you've worked with Python before, you've probably come across this code snippet in various forms.
+
 ```python
 numbers = [1, 2, 3, 4, 5]
 sum_result = 0
@@ -30,6 +28,7 @@ The `for` loop is a crucial tool in Python for iterating over sequences, and it'
 5. **Index Access**: In addition to iterating over the elements directly, you can use the `enumerate()` with a `for` loop to access both the index and the element in each iteration.
 
 # The problem
+
 However, even though it's a simple and essential building block for developers, it can sometimes make your code inefficient. For example, let's take a look at this case:
 
 ```python
