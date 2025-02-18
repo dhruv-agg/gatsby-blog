@@ -1,3 +1,8 @@
+---
+title: "The mystery behind the `__pycache__` folder"
+date: "2025-02-18T23:46:37.121Z"
+---
+
 If you’ve been diving into Python, you might have stumbled upon a curious directory called `__pycache__`. Let’s demystify it a bit!
 
 ![pycache_image](./pycache.webp)
@@ -29,7 +34,7 @@ and many more.
 ### When does it get created?
 `__pycache__` pops up automatically when you run a Python script that imports another module. If you’re running a standalone file, it doesn’t show up. If the relevant `.pyc` files don’t exist yet, or if the source file has changed since the last run, Python will compile the source code and store the bytecode in `__pycache__`.
 
-### Should You Delete __pycache__?
+### Should You Delete pycache?
 You may wonder whether it's safe to delete the "__pycache__" folder. In most cases, it's entirely safe, as Python will recreate it as needed.
 
 However, there are some scenarios where you might want to keep it:
